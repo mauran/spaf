@@ -16,7 +16,7 @@
     <meta name="msapplication-square150x150logo" content="template/style/graphics/favicon.png"/>
     <meta name="msapplication-wide310x150logo" content="template/style/graphics/faviconBig.png"/>
     <meta name="msapplication-square310x310logo" content="template/style/graphics/faviconBig.png"/>
-    <meta name="msapplication-TileColor" content="#222222"/>
+    <meta name="msapplication-TileColor" content="#eeeeee"/>
     <link rel="apple-touch-icon" sizes="57x57" href="template/style/graphics/favicon.png">
     <link rel="apple-touch-icon" sizes="60x60" href="template/style/graphics/favicon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="template/style/graphics/favicon.png">
@@ -24,7 +24,7 @@
     <link rel="icon" type="image/png" href="template/style/graphics/favicon.png" sizes="32x32">
     <link rel="icon" type="image/png" href="template/style/graphics/favicon.png" sizes="96x96">
     <link rel="icon" type="image/png" href="template/style/graphics/favicon.png" sizes="16x16">
-    <meta name="theme-color" content="#222222">
+    <meta name="theme-color" content="#eeeeee">
   </head>
   <body>
     <div id="mainContent">
