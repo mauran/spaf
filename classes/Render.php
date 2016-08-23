@@ -10,11 +10,11 @@ class Render {
     if (is_dir($templateDir)) {
       $thisController = $template;
       if (is_file($templateDir."/header.template") && $chrome) {
-        include($templateDir."/header.template");
+        include_once($templateDir."/header.template");
       }
 
       if (is_file($templateDir."/".$template.".template") && $template != 'header' && $template != 'footer') {
-        include($templateDir."/".$template.".template");
+        include_once($templateDir."/".$template.".template");
         if (!$chrome) {
           foreach($javascripts as $javascript){
             echo $javascript;
@@ -26,11 +26,11 @@ class Render {
       }
 
       if ($chrome) {
-        include($translationDir."/"._LANGUAGE_ISO_."_js.php");
+        include_once($translationDir."/"._LANGUAGE_ISO_."_js.php");
       }
 
       if (is_file($templateDir."/footer.template") && $chrome) {
-        include($templateDir."/footer.template");
+        include_once($templateDir."/footer.template");
       }
     }
     else {

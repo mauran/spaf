@@ -1,4 +1,4 @@
     </div><!-- Main content end -->
-    <?php include('javascripts.tpl')?>
+    <?php include('javascripts.template')?>
   </body>
 </html>

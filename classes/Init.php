@@ -1,5 +1,8 @@
 <?php
 class Init {
+  public function _load() {
+    self::getInstance()->init();
+  }
   public static $instance = null;
   public static function getInstance() {
       if (!self::$instance) {
@@ -14,6 +17,5 @@ class Init {
     session_start();
     ini_set('session.save_path',$_SERVER['DOCUMENT_ROOT'] . "/sessions");
     Controller::getInstance()->fetchController();
-    exit();
   }
 }
