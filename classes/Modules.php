@@ -20,11 +20,11 @@ class Modules {
         require_once($modulePath);
         $includedModules[] = $module;
       }
-      foreach($includedModules as $module) {
-        $function = '_load';
-        if (method_exists($module,$function)) {
-          call_user_func(array($module,$function));
-        }
+    }
+    foreach($includedModules as $module) {
+      $function = '_load';
+      if (method_exists($module,$function)) {
+        call_user_func(array($module,$function));
       }
     }
   }

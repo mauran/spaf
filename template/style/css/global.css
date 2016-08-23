@@ -1,0 +1,12 @@
+body {
+  background-color: #222222;
+  background: url('../graphics/bg.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#logo {
+  width: 100%;
+  max-width: 120px;
+}
