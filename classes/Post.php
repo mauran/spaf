@@ -1,3 +1,4 @@
+<?php
 class Post {
   public static function isPostback() {
     if (strtoupper($_SERVER['REQUEST_METHOD']) == 'POST') {
