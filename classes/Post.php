@@ -1,5 +1,19 @@
-<?php
 class Post {
+  public static function isPostback() {
+    if (strtoupper($_SERVER['REQUEST_METHOD']) == 'POST') {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+  public static function getInputPost($keyName) {
+    $post = self::getPost($keyName);
+    if ($post !== true) {
+      return $post;
+    }
+    return false;
+  }
   public static function getPost($keyName) {
     if(array_key_exists($keyName, $_POST)) {
       if($_POST[$keyName] != '') {
@@ -9,13 +23,12 @@ class Post {
     }
     return false;
   }
-  public static function isPostback() {
-    if (strtoupper($_SERVER['REQUEST_METHOD']) == 'POST') {
-      return true;
+  public static function getInputQuery($keyName) {
+    $post = self::getQuery($keyName);
+    if ($post !== true) {
+      return $post;
     }
-    else {
-      return false;
-    }
+    return false;
   }
   public static function getQuery($keyName) {
     parse_str($_SERVER['QUERY_STRING'],$queries);
