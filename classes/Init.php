@@ -14,7 +14,9 @@ class Init {
     if (!_DEBUG_) {
       error_reporting(E_ERROR | E_PARSE);
     }
-    session_start();
+    if (session_status() == PHP_SESSION_NONE) {
+      session_start();
+    }
     ini_set('session.save_path',$_SERVER['DOCUMENT_ROOT'] . "/sessions");
     Controller::getInstance()->fetchController();
   }
