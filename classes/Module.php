@@ -1,16 +1,16 @@
 <?php
-class Modules {
+class Module {
   public function _load() {
-    self::getInstance()->includeModules();
+    self::getInstance()->loadModules();
   }
   public static $instance = null;
   public static function getInstance() {
       if (!self::$instance) {
-          self::$instance = new Modules();
+          self::$instance = new Module();
       }
       return self::$instance;
   }
-  public function includeModules() {
+  public function loadModules() {
     $includedModules = array();
     foreach (glob("modules/*") as $dirname)
     {
@@ -26,6 +26,19 @@ class Modules {
       if (method_exists($module,$function)) {
         call_user_func(array($module,$function));
       }
+    }
+  }
+  public function isModule($module) {
+    $modulePath = 'modules/'.$module.'/'.$module.'.php';
+    if (is_file($modulePath)) {
+      return true;
+    }
+    return false;
+  }
+  public function runModule($module) {
+    $function = '_run';
+    if (method_exists($module,$function)) {
+      call_user_func(array($module,$function));
     }
   }
 }

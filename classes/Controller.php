@@ -1,6 +1,7 @@
 <?php
 class Controller {
   public static $instance = null;
+  public static $controllerFetched = null;
   public static function getInstance() {
       if (!self::$instance) {
           self::$instance = new Controller();
@@ -8,22 +9,30 @@ class Controller {
       return self::$instance;
   }
   public static function fetchController() {
-    $render = new Render();
-
-    $contentOnly = true;
-    if (Post::getQuery('content_only'))
-      $contentOnly = false;
-
-    $page = Post::getQuery('p');
-    if ($page != '') {
-      switch ($page) {
-        default:
-          $render->renderPage($page, $contentOnly);
-        break;
+    if (self::$instance && !self::$controllerFetched) {
+      $render = new Render();
+      $page = Post::getInputQuery('p');
+      $module = Post::getInputQuery('m');
+      $chrome = true;
+      if (Post::getQuery('content_only')) {
+        $chrome = false;
       }
-    }
-    else {
-      $render->renderPage('index',$contentOnly);
+      if ($module && Module::isModule($module)) {
+        Module::runModule($module);
+      }
+      else {
+        if ($page) {
+          switch ($page) {
+            default:
+              $render->renderPage($page, $chrome);
+            break;
+          }
+        }
+        else {
+          $render->renderPage('index',$chrome);
+        }
+      }
+      self::$controllerFetched = true;
     }
   }
 }
