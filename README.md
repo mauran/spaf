@@ -8,4 +8,4 @@ SPAF also contains a simple templating system based on simple HTML with enabled 
 
 That's about it. All SPAF is about, is getting started quick with development, without the hassle of setting up the basic application base every time.
 
-![SPAF](http://files.web-infusion.dk/files/images/spafLogo.png)
+![SPAF](https://raw.githubusercontent.com/ebbesmoeller/spaf/master/template/media/graphics/spaf.png)
