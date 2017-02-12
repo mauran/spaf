@@ -3,7 +3,7 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <div class="center-block text-center">
-        <img id="logo" src="template/style/graphics/spafLogo.png" alt=""/>
+        <img id="logo" src="template/media/graphics/spaf.png" alt=""/>
         <br />
         <h1><?php $t->t('Welcome to SPAF')?></h1>
         <p>
