@@ -24,13 +24,10 @@
       </div>
       <?php $t->t('A copy of this license is found in project root folder.')?>
     </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <div class="center-block text-center">
-        <a href="https://github.com/ebbesmoeller/spaf" target="_blank" style="font-size: 25px; display: block; margin-bottom: 10px;"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-        <a href="http://web-infusion.dk/" target="_blank"><img src="http://web-infusion.dk/style/logoBlingMail.png" alt="" style="width: 100%; max-width: 250px;"/></a>
-      </div>
+    <br />
+    <div class="center-block text-center">
+      <a href="http://web-infusion.dk/" target="_blank"><img src="http://web-infusion.dk/style/logoBlingMail.png" alt="" style="width: 100%; max-width: 250px;"/></a>
     </div>
+    <br />
   </div>
 </div>
