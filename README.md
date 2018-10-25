@@ -1,4 +1,4 @@
-#SPAF
+# SPAF
 
 SPAF is a basic PHP framework, without any bells and whistles.
 The goal of SPAF is to provide an easy to use (for programmers) framework, for which to build web-applications in PHP upon.
